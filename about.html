@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Inspire Architecture & Engineering</title>
+<meta name="description" content="Learn about Inspire Architecture & Engineering — founded in Cairo in 2010 by Architect Hassan Elashmawy with a belief that proper architecture is a fundamental right.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero{height:70vh;position:relative;display:flex;align-items:flex-end;padding:0 60px 80px;overflow:hidden}
+.page-hero .hbg{position:absolute;inset:0;background-size:cover;background-position:center top}
+.page-hero .hov{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,14,13,.95) 0%,rgba(14,14,13,.5) 50%,rgba(14,14,13,.15) 100%)}
+.page-hero .hcont{position:relative;z-index:2}
+.about-split{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.about-img{position:relative;overflow:hidden}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block}
+.about-text{background:var(--dark2);padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
+.about-text p{font-size:15px;color:rgba(253,252,249,.65);line-height:1.8;margin-bottom:20px}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:40px}
+.stat-item{background:var(--dark2);padding:32px 24px}
+.stat-num{font-family:var(--serif);font-size:48px;font-weight:300;color:var(--gold);line-height:1;display:block}
+.stat-label{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:6px;display:block}
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px}
+.value-item{border-top:1px solid rgba(184,150,90,.3);padding-top:32px}
+.value-title{font-family:var(--serif);font-size:24px;font-weight:300;margin-bottom:12px;color:var(--gold)}
+.value-desc{font-size:14px;color:rgba(253,252,249,.6);line-height:1.8}
+.founder-card{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:center;padding:60px;background:var(--dark3);margin-top:60px}
+.founder-img{width:200px;height:200px;border-radius:50%;object-fit:cover;filter:grayscale(.3)}
+.founder-name{font-family:var(--serif);font-size:32px;font-weight:300;margin-bottom:4px}
+.founder-title{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
+.founder-bio{font-size:14px;color:rgba(253,252,249,.65);line-height:1.8}
+@media(max-width:1024px){
+  .page-hero{padding:0 40px 60px}
+  .about-text{padding:60px 40px}
+  .values-grid{gap:32px}
+  .founder-card{padding:40px}
+}
+@media(max-width:768px){
+  .page-hero{height:55vh;padding:0 24px 48px}
+  .about-split{grid-template-columns:1fr}
+  .about-img{min-height:340px}
+  .about-text{padding:48px 24px}
+  .stat-row{grid-template-columns:repeat(3,1fr)}
+  .values-grid{grid-template-columns:1fr;gap:24px}
+  .founder-card{grid-template-columns:1fr;text-align:center;padding:32px 24px;gap:24px}
+  .founder-img{width:140px;height:140px;margin:0 auto}
+}
+@media(max-width:480px){
+  .page-hero{height:50vh;padding:0 20px 40px}
+  .stat-row{grid-template-columns:1fr;gap:0}
+  .stat-item{border-bottom:1px solid rgba(255,255,255,.06)}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cur"></div>
+<div class="cring" id="cr"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nlogo">Inspire<span>.</span></a>
+  <div class="nlinks">
+    <a href="index.html#services">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html" style="color:var(--gold)">About</a>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#cta" class="ncta">Get in Touch</a>
+  </div>
+  <button class="nham" id="ham" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nmob" id="nmob">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="careers.html">Careers</a>
+  <a href="index.html#cta" class="ncta">Get in Touch</a>
+</div>
+
+<div class="page-hero">
+  <div class="hbg" style="background-image:url('https://lh3.googleusercontent.com/sitesv/AA5AbUCuXMUSKrSiwE02Rrf2Yji3EIXByCPKiOJTHswJshYIvKryOnZo-tuAhbOHG9gvoIk5eOkYbkhH_zFTkKfPbuTvx1JA28bidfg4Eq1kqDwTXG6Oru-vRlNY9YcajffZVjqgLQhDuDxSqL4ev63lsJofz1l6sktM2-tCrMXdx3PjJ0g68-bkE-Vvn-YlPOU3sHfGCA=w1280')"></div>
+  <div class="hov"></div>
+  <div class="hcont">
+    <div class="htag">Our Story</div>
+    <h1 class="htitle">Architecture as a<br><em>vital right.</em></h1>
+  </div>
+</div>
+
+<!-- Founder story split -->
+<div class="about-split">
+  <div class="about-img">
+    <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCsplAYZwf-sbxcJvAhWSUGM8ZfySo-S_sfy-CM94KqPQ0L0GPyZF01TMR4jSLQ_LXzwW7kkglqGfIZ9dUBRihnwwLan3tcaUvifkY1aTJL0r8zwydSgTc0IGsnv-CweqA7etEcl_eWsYDv6cy9GL8IfjY4wqjaXUbRHoMOhpuMv0BkiCWqx7OyhcdENbKjhIYDHz2Q7fPGc5NG6UIiPJk7NujGZtytqb8QOvI=w1280" alt="Inspire Architecture project">
+    <div class="abadge"><span class="bn">2010</span><span class="bt">Founded in Cairo</span></div>
+  </div>
+  <div class="about-text">
+    <div class="slbl">Who We Are</div>
+    <h2 class="stitle">Built on belief,<br><em>driven by design.</em></h2>
+    <p>Inspire Architecture &amp; Engineering was founded in Cairo in 2010 by Architect Hassan Elashmawy — a 2005 graduate of Cairo University who honed his craft at the world-renowned firm Dar Al Handasah before striking out with a singular vision.</p>
+    <p>That vision: that proper architecture is not a luxury but a fundamental right. That the spaces people inhabit every day — hospitals, schools, homes, workplaces — profoundly shape their lives, and deserve to be designed with rigour, creativity, and care.</p>
+    <p>Fifteen years and 200+ projects later, that belief remains the foundation of everything we do.</p>
+    <div class="stat-row rev">
+      <div class="stat-item"><span class="stat-num">15+</span><span class="stat-label">Years of Excellence</span></div>
+      <div class="stat-item"><span class="stat-num">200+</span><span class="stat-label">Projects Completed</span></div>
+      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Client Commitment</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Values -->
+<section style="background:var(--dark)">
+  <div class="slbl">What We Stand For</div>
+  <h2 class="stitle">Our values &amp;<br><em>approach.</em></h2>
+  <div class="values-grid rev" style="margin-top:60px">
+    <div class="value-item">
+      <div class="value-title">Vision</div>
+      <div class="value-desc">Proper architecture is a vital right. Creativity, practicality and appropriateness create strong relationships between people and the spaces they use every day. We design for that relationship.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-title">Mission</div>
+      <div class="value-desc">To create spaces of distinction and long-lasting value — adding a signature design identity to every project we touch, whether a single-family villa or a university campus.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-title">Process</div>
+      <div class="value-desc">Seamless execution from concept through to construction supervision. Every detail overseen with precision, every decision made with purpose. We don't just design spaces — we deliver them.</div>
+    </div>
+    <div class="value-item">
+      <div class="value-title">People</div>
+      <div class="value-desc">A talented multidisciplinary team combining deep technical knowledge with genuine passion for exceptional design. Architects, interior designers, landscape architects and engineers working as one.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Process section (reused from homepage) -->
+<section id="process" style="background:var(--dark2)">
+  <div class="slbl">How We Work</div>
+  <h2 class="stitle">Our <em>Process</em></h2>
+  <div class="prgrid rev">
+    <div class="prstep">
+      <div class="prnum">01</div>
+      <div class="prtitle">Discovery &amp; Brief</div>
+      <div class="prdesc">We begin with deep listening — understanding your vision, needs, site constraints and budget to form a precise project brief that guides everything that follows.</div>
+    </div>
+    <div class="prstep">
+      <div class="prnum">02</div>
+      <div class="prtitle">Concept Design</div>
+      <div class="prdesc">From the brief we develop spatial concepts, precedent studies and initial design options — exploring possibilities before committing to a direction.</div>
+    </div>
+    <div class="prstep">
+      <div class="prnum">03</div>
+      <div class="prtitle">Design Development</div>
+      <div class="prdesc">The chosen concept is refined through detailed drawings, material specifications, engineering coordination and regulatory submissions.</div>
+    </div>
+    <div class="prstep">
+      <div class="prnum">04</div>
+      <div class="prtitle">Construction &amp; Delivery</div>
+      <div class="prdesc">We supervise construction from groundbreaking to handover — ensuring every detail is executed with the precision the design demands.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Founder spotlight -->
+<section style="background:var(--dark)">
+  <div class="slbl">Leadership</div>
+  <h2 class="stitle">Meet the <em>founder.</em></h2>
+  <div class="founder-card rev">
+    <img class="founder-img" src="https://lh3.googleusercontent.com/sitesv/AA5AbUCuXMUSKrSiwE02Rrf2Yji3EIXByCPKiOJTHswJshYIvKryOnZo-tuAhbOHG9gvoIk5eOkYbkhH_zFTkKfPbuTvx1JA28bidfg4Eq1kqDwTXG6Oru-vRlNY9YcajffZVjqgLQhDuDxSqL4ev63lsJofz1l6sktM2-tCrMXdx3PjJ0g68-bkE-Vvn-YlPOU3sHfGCA=w1280" alt="Architect Hassan Elashmawy">
+    <div>
+      <div class="founder-name">Hassan Elashmawy</div>
+      <span class="founder-title">Founder &amp; Principal Architect</span>
+      <p class="founder-bio">A 2005 graduate of Cairo University's Faculty of Engineering (Architecture), Hassan began his professional career at Dar Al Handasah — one of the world's most respected architecture and engineering firms — where he developed the technical depth and design rigour that would define Inspire's approach.</p>
+      <p class="founder-bio" style="margin-top:12px">In 2010 he founded Inspire Architecture &amp; Engineering with a conviction that every person deserves to live and work in a thoughtfully designed space. His leadership has guided the firm through 200+ projects across Egypt, from large-scale university campuses to intimate villa landscapes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" style="background:var(--dark3);text-align:center;position:relative;overflow:hidden">
+  <div class="ctai">
+    <div class="slbl" style="justify-content:center">Start a Project</div>
+    <h2 class="stitle">Let's build something<br><em>remarkable.</em></h2>
+    <p style="font-size:16px;color:rgba(253,252,249,.55);max-width:560px;margin:0 auto 48px;line-height:1.8">Whether you have a fully-formed brief or just an idea, we'd love to hear from you. Every great space begins with a conversation.</p>
+    <div class="cact">
+      <a href="mailto:info@inspirearchitecture.net" class="btn">Send Us an Email</a>
+      <a href="tel:+201006277762" class="btng">Call Us →</a>
+    </div>
+    <div class="cinfo">
+      <div><span class="cilbl">Address</span><span class="cival"><a href="https://maps.app.goo.gl/FuCFKVB11MYEzg53A" target="_blank" rel="noopener">12 Rashdan St., Dokki, Giza</a></span></div>
+      <div><span class="cilbl">Phone</span><span class="cival"><a href="tel:+201006277762">+20 10 0627 7762</a></span></div>
+      <div><span class="cilbl">Email</span><span class="cival"><a href="mailto:info@inspirearchitecture.net">info@inspirearchitecture.net</a></span></div>
+      <div><span class="cilbl">Instagram</span><span class="cival"><a href="https://www.instagram.com/inspire.architects/" target="_blank" rel="noopener">@inspire.architects</a></span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="flogo">Inspire<span>.</span> Architecture &amp; Engineering</a>
+  <div class="flinks">
+    <a href="index.html#services">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#cta">Contact</a>
+    <a href="https://www.instagram.com/inspire.architects/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://maps.app.goo.gl/FuCFKVB11MYEzg53A" target="_blank" rel="noopener">Find Us</a>
+  </div>
+  <div class="fcopy">© 2025 Inspire Architecture &amp; Engineering. Cairo, Egypt.</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

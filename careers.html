@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers — Inspire Architecture & Engineering</title>
+<meta name="description" content="Join the team at Inspire Architecture & Engineering. We're looking for talented architects, interior designers, landscape architects and engineers who believe design matters.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-hero{height:60vh;position:relative;display:flex;align-items:flex-end;padding:0 60px 80px;overflow:hidden}
+.page-hero .hbg{position:absolute;inset:0;background-size:cover;background-position:center}
+.page-hero .hov{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,14,13,.93) 0%,rgba(14,14,13,.4) 50%,rgba(14,14,13,.1) 100%)}
+.page-hero .hcont{position:relative;z-index:2}
+.how-to-apply{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:60px}
+.apply-step{background:var(--dark3);padding:48px 36px}
+.apply-num{font-family:var(--serif);font-size:48px;font-weight:300;color:rgba(184,150,90,.2);line-height:1;margin-bottom:16px}
+.apply-title{font-family:var(--serif);font-size:20px;font-weight:400;margin-bottom:10px}
+.apply-desc{font-size:13px;color:var(--muted);line-height:1.7}
+.perks-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:60px}
+.perk{display:flex;gap:20px;align-items:flex-start}
+.perk-icon{width:40px;height:40px;border:1px solid rgba(184,150,90,.3);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:18px;flex-shrink:0}
+.perk-title{font-family:var(--serif);font-size:18px;font-weight:400;margin-bottom:6px}
+.perk-desc{font-size:13px;color:var(--muted);line-height:1.6}
+@media(max-width:1024px){
+  .page-hero{padding:0 40px 60px}
+  .how-to-apply{grid-template-columns:1fr}
+  .apply-step{border-bottom:1px solid rgba(255,255,255,.06)}
+}
+@media(max-width:768px){
+  .page-hero{height:50vh;padding:0 24px 48px}
+  .perks-grid{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:480px){
+  .page-hero{height:45vh;padding:0 20px 40px}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cur"></div>
+<div class="cring" id="cr"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nlogo">Inspire<span>.</span></a>
+  <div class="nlinks">
+    <a href="index.html#services">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="careers.html" style="color:var(--gold)">Careers</a>
+    <a href="index.html#cta" class="ncta">Get in Touch</a>
+  </div>
+  <button class="nham" id="ham" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nmob" id="nmob">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="about.html">About</a>
+  <a href="careers.html">Careers</a>
+  <a href="index.html#cta" class="ncta">Get in Touch</a>
+</div>
+
+<div class="page-hero">
+  <div class="hbg" style="background-image:url('https://lh3.googleusercontent.com/sitesv/AA5AbUDasl1i_gYKqWPKrKnwtOyDM-5zOtYuJoRtayq0KV532L_s5ZnN6m2rBLmkkLf0MTGtX1GLOhJOVIOlXNZxJ8oGLW9Z6MtQV41VUkZBbnyZT8rRee6gspocr2gWURRP_cPGq2khwpZf7RP9ORd4idB4nSHUA7x2EbpXWXhY_L-hICIJqKdT1n1hmaXdiVEMwp00CKmF-9AAqKBeFniwivv0XFIP-uX5f0Lx=w1280')"></div>
+  <div class="hov"></div>
+  <div class="hcont">
+    <div class="htag">Work With Us</div>
+    <h1 class="htitle">Build your career<br><em>with us.</em></h1>
+  </div>
+</div>
+
+<!-- Intro -->
+<section style="background:var(--dark)">
+  <div class="sint rev">
+    <div>
+      <div class="slbl">Join Our Team</div>
+      <h2 class="stitle">We're always looking for<br><em>great talent.</em></h2>
+    </div>
+    <div>
+      <p style="font-size:15px;color:rgba(253,252,249,.65);line-height:1.8">We are always looking for talented architects, interior designers, landscape architects and engineers who share our belief that great design is a fundamental right.</p>
+      <p style="font-size:15px;color:rgba(253,252,249,.65);line-height:1.8;margin-top:16px">If you are passionate about creating spaces that matter — from teaching hospitals to villa gardens — we would love to hear from you.</p>
+    </div>
+  </div>
+
+  <!-- Perks -->
+  <div class="perks-grid rev">
+    <div class="perk">
+      <div class="perk-icon">⬡</div>
+      <div>
+        <div class="perk-title">Meaningful Projects</div>
+        <div class="perk-desc">Work on a diverse portfolio spanning healthcare, education, hospitality and residential — every project an opportunity to make a real impact.</div>
+      </div>
+    </div>
+    <div class="perk">
+      <div class="perk-icon">◈</div>
+      <div>
+        <div class="perk-title">Collaborative Culture</div>
+        <div class="perk-desc">A close-knit, multidisciplinary team where architects, designers and engineers work side by side from concept to completion.</div>
+      </div>
+    </div>
+    <div class="perk">
+      <div class="perk-icon">⬟</div>
+      <div>
+        <div class="perk-title">Design Excellence</div>
+        <div class="perk-desc">We hold our work to the highest standards. Every project receives the same rigour and creative investment regardless of scale or budget.</div>
+      </div>
+    </div>
+    <div class="perk">
+      <div class="perk-icon">◎</div>
+      <div>
+        <div class="perk-title">Cairo & Beyond</div>
+        <div class="perk-desc">Based in Dokki, Cairo — with projects across Egypt and occasionally further afield. Our work takes us to fascinating sites and contexts.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Open Roles -->
+<section style="background:var(--dark2)">
+  <div class="slbl">Open Positions</div>
+  <h2 class="stitle">Current <em>openings.</em></h2>
+  <div class="sgrid rev" style="margin-top:60px">
+    <a href="mailto:info@inspirearchitecture.net?subject=Application — Architecture" class="sc2">
+      <div class="snum">01</div>
+      <div class="sico">⬡</div>
+      <div class="sname">Architecture</div>
+      <p class="sdesc">Architects at all levels — graduate through senior — with experience in educational, healthcare, residential or commercial projects. Strong technical skills and design sensibility required.</p>
+      <span class="sarr">→</span>
+    </a>
+    <a href="mailto:info@inspirearchitecture.net?subject=Application — Interior Design" class="sc2">
+      <div class="snum">02</div>
+      <div class="sico">◈</div>
+      <div class="sname">Interior Design</div>
+      <p class="sdesc">Interior designers with a strong portfolio across hospitality, residential or commercial interiors. A sharp eye for detail, material knowledge, and client communication skills.</p>
+      <span class="sarr">→</span>
+    </a>
+    <a href="mailto:info@inspirearchitecture.net?subject=Application — Landscape Architecture" class="sc2">
+      <div class="snum">03</div>
+      <div class="sico">⬟</div>
+      <div class="sname">Landscape &amp; Planning</div>
+      <p class="sdesc">Landscape architects and urban planners passionate about sustainable, human-centred outdoor environments — from intimate villa gardens to large university campuses.</p>
+      <span class="sarr">→</span>
+    </a>
+    <a href="mailto:info@inspirearchitecture.net?subject=Open Application" class="sc2">
+      <div class="snum">04</div>
+      <div class="sico">◎</div>
+      <div class="sname">Open Application</div>
+      <p class="sdesc">Don't see your role listed? We welcome enquiries from talented individuals at any stage of their career. Send us your work and introduce yourself.</p>
+      <span class="sarr">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- How to Apply -->
+<section style="background:var(--dark)">
+  <div class="slbl">Application Process</div>
+  <h2 class="stitle">How to <em>apply.</em></h2>
+  <div class="how-to-apply rev">
+    <div class="apply-step">
+      <div class="apply-num">01</div>
+      <div class="apply-title">Send Your CV</div>
+      <div class="apply-desc">Email your CV and a brief cover letter to <strong style="color:var(--white)">info@inspirearchitecture.net</strong> with the role you're applying for in the subject line.</div>
+    </div>
+    <div class="apply-step">
+      <div class="apply-num">02</div>
+      <div class="apply-title">Share Your Portfolio</div>
+      <div class="apply-desc">Include a portfolio PDF (max 10MB) or a link to your work online. Show us the projects you're most proud of and explain your role in each.</div>
+    </div>
+    <div class="apply-step">
+      <div class="apply-num">03</div>
+      <div class="apply-title">Interview &amp; Studio Visit</div>
+      <div class="apply-desc">Shortlisted candidates will be invited to the studio in Dokki for a conversation about their work, our projects, and how we can grow together.</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:60px">
+    <p style="font-size:15px;color:rgba(253,252,249,.6);margin-bottom:32px">Ready to apply? We'd love to hear from you.</p>
+    <a href="mailto:info@inspirearchitecture.net?subject=Career Enquiry" class="btn">Send Your Application</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" style="background:var(--dark3);text-align:center;position:relative;overflow:hidden">
+  <div class="ctai">
+    <div class="slbl" style="justify-content:center">Get in Touch</div>
+    <h2 class="stitle">Questions? Let's<br><em>talk.</em></h2>
+    <p style="font-size:16px;color:rgba(253,252,249,.55);max-width:520px;margin:0 auto 48px;line-height:1.8">Whether you want to know more about working with us or have a project in mind, the door is always open.</p>
+    <div class="cact">
+      <a href="mailto:info@inspirearchitecture.net" class="btn">Send Us an Email</a>
+      <a href="tel:+201006277762" class="btng">Call Us →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="flogo">Inspire<span>.</span> Architecture &amp; Engineering</a>
+  <div class="flinks">
+    <a href="index.html#services">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="careers.html">Careers</a>
+    <a href="index.html#cta">Contact</a>
+    <a href="https://www.instagram.com/inspire.architects/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://maps.app.goo.gl/FuCFKVB11MYEzg53A" target="_blank" rel="noopener">Find Us</a>
+  </div>
+  <div class="fcopy">© 2025 Inspire Architecture &amp; Engineering. Cairo, Egypt.</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
