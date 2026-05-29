@@ -153,6 +153,15 @@ section{padding:120px 60px}
 .id-sub-coming span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.2)}
 .id-sub-coming::before,.id-sub-coming::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.06)}
 
+/* ── Project gallery grid ── */
+.pd-gallery{padding:0 60px 80px}
+.pg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pg-item{overflow:hidden;aspect-ratio:4/3}
+.pg-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.pg-item:hover img{transform:scale(1.04)}
+@media(max-width:960px){.pd-gallery{padding:0 32px 60px}.pg-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pd-gallery{padding:0 24px 48px}.pg-grid{grid-template-columns:1fr}}
+
 /* ── Project detail hero with placeholder bg ── */
 .pd-hero.no-img{background:var(--dark3)}
 .pd-hero.no-img .hov{background:rgba(14,14,13,.4)}
