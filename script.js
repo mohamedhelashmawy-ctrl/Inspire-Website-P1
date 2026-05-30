@@ -72,6 +72,44 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+// ── Featured Projects Carousel ─────────────────────────────────────────────
+(function () {
+  const track = document.getElementById('fcTrack');
+  if (!track) return;
+  const dotsWrap = document.getElementById('fcDots');
+  const dots     = dotsWrap ? Array.from(dotsWrap.children) : [];
+  const total    = track.children.length;
+  let cur = 0, timer;
+
+  function goTo(n) {
+    cur = (n + total) % total;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('on', i === cur));
+  }
+
+  function startTimer() { timer = setInterval(() => goTo(cur + 1), 6000); }
+  function stopTimer()  { clearInterval(timer); }
+
+  document.getElementById('fcPrev')?.addEventListener('click', () => goTo(cur - 1));
+  document.getElementById('fcNext')?.addEventListener('click', () => goTo(cur + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+  // Touch swipe
+  let tx = 0;
+  track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 40) goTo(dx < 0 ? cur + 1 : cur - 1);
+  }, { passive: true });
+
+  // Pause on hover
+  const wrap = track.closest('.fc-wrap');
+  wrap?.addEventListener('mouseenter', stopTimer);
+  wrap?.addEventListener('mouseleave', startTimer);
+
+  startTimer();
+})();
+
 // ── Smooth scroll for anchor links ────────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

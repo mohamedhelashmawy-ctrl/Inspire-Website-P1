@@ -271,6 +271,18 @@ section{padding:120px 60px}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 
+/* ── Featured Projects Carousel ── */
+.fc-wrap{padding:0;position:relative;overflow:hidden}
+.fc-track{display:flex;transition:transform .75s cubic-bezier(.4,0,.2,1);will-change:transform}
+.fc-slide{min-width:100%;flex-shrink:0}
+.fc-arr{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;background:rgba(14,14,13,.55);border:1px solid rgba(184,150,90,.28);color:var(--gold);font-size:36px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;transition:all .3s;padding:0;font-family:var(--serif);backdrop-filter:blur(6px)}
+.fc-arr:hover{background:var(--gold);color:var(--dark);border-color:var(--gold)}
+.fc-prev{left:28px}
+.fc-next{right:calc(50% + 28px)}
+.fc-dots{position:absolute;bottom:28px;left:25%;transform:translateX(-50%);display:flex;gap:8px;z-index:20;align-items:center}
+.fc-dot{width:6px;height:6px;border-radius:3px;background:rgba(253,252,249,.25);border:none;cursor:pointer;transition:all .4s cubic-bezier(.4,0,.2,1);padding:0}
+.fc-dot.on{background:var(--gold);width:28px}
+
 /* ── Footer ── */
 footer{background:var(--dark2);border-top:1px solid rgba(184,150,90,.1);padding:60px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px}
 .flogo{font-family:var(--serif);font-size:20px;font-weight:300;letter-spacing:.08em;color:var(--white);margin-bottom:16px}
@@ -289,6 +301,8 @@ footer{background:var(--dark2);border-top:1px solid rgba(184,150,90,.1);padding:
   .pgrid{grid-template-columns:repeat(2,1fr)}
   .fi,.aw{grid-template-columns:1fr}
   .finfo,.ainfo{padding:48px 32px}
+  .fc-arr{display:none}
+  .fc-dots{left:50%}
   .sint{grid-template-columns:1fr;gap:32px}
   .sgrid{grid-template-columns:repeat(2,1fr)}
   .cta-details{grid-template-columns:1fr}
