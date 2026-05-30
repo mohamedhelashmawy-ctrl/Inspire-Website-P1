@@ -103,7 +103,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   }, { passive: true });
 
   // Pause on hover
-  const wrap = track.closest('.fc-wrap');
+  const wrap = document.getElementById('fcOuter');
   wrap?.addEventListener('mouseenter', stopTimer);
   wrap?.addEventListener('mouseleave', startTimer);
 
