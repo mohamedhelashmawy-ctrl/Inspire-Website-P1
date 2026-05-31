@@ -68,22 +68,25 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // ── Featured Projects Carousel ─────────────────────────────────────────────
 (function () {
+  const outer = document.getElementById('fcOuter');
   const track = document.getElementById('fcTrack');
-  if (!track) return;
+  if (!outer || !track) return;
   const dotsWrap = document.getElementById('fcDots');
   const dots     = dotsWrap ? Array.from(dotsWrap.children) : [];
   const total    = track.children.length;
   let cur = 0, timer;
 
+  function slideW() { return outer.clientWidth; }
+
   function goTo(n) {
     cur = (n + total) % total;
-    track.style.transform = `translateX(-${cur * 100}%)`;
+    track.style.transform = `translateX(-${cur * slideW()}px)`;
     dots.forEach((d, i) => d.classList.toggle('on', i === cur));
   }
 
@@ -94,6 +97,9 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   document.getElementById('fcNext')?.addEventListener('click', () => goTo(cur + 1));
   dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
 
+  // Recalculate position on resize
+  window.addEventListener('resize', () => goTo(cur));
+
   // Touch swipe
   let tx = 0;
   track.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
@@ -103,9 +109,8 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   }, { passive: true });
 
   // Pause on hover
-  const wrap = document.getElementById('fcOuter');
-  wrap?.addEventListener('mouseenter', stopTimer);
-  wrap?.addEventListener('mouseleave', startTimer);
+  outer.addEventListener('mouseenter', stopTimer);
+  outer.addEventListener('mouseleave', startTimer);
 
   startTimer();
 })();

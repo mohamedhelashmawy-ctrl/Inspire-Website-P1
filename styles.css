@@ -272,9 +272,9 @@ section{padding:120px 60px}
 .reveal.in{opacity:1;transform:none}
 
 /* ── Featured Projects Carousel ── */
-.fc-outer{position:relative;overflow:hidden}
+.fc-outer{position:relative;overflow:hidden;width:100%}
 .fc-track{display:flex;transition:transform .7s cubic-bezier(.4,0,.2,1);will-change:transform}
-.fc-slide{flex:0 0 100%;width:100%}
+.fc-slide{flex:none;width:100%}
 .fc-outer .fi{min-height:520px}
 .fc-outer .finfo{padding:64px 72px;justify-content:center}
 .fc-arr{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;background:rgba(14,14,13,.6);border:1px solid rgba(184,150,90,.3);color:var(--gold);font-size:32px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:20;transition:all .3s;padding:0;font-family:var(--serif)}
@@ -305,7 +305,6 @@ footer{background:var(--dark2);border-top:1px solid rgba(184,150,90,.1);padding:
   .finfo,.ainfo{padding:48px 32px}
   .fc-arr{display:none}
   .fc-dots{left:50%;transform:translateX(-50%);bottom:16px}
-  .fc-outer .fi{min-height:0}
   .fc-outer .finfo{padding:40px 32px}
   .sint{grid-template-columns:1fr;gap:32px}
   .sgrid{grid-template-columns:repeat(2,1fr)}
